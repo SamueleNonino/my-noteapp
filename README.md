@@ -3,6 +3,9 @@
 a small application that allows you to have notes on a virtual whiteboard
 
 
+![](my-screen.png)
+
+
 ## Installation
 
 Clone the repo locally:
