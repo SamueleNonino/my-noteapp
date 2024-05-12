@@ -238,7 +238,7 @@ export const Card = ({parentRect, noteData}) => {
             
             {ShowToolBar && <ToolBarCard  handleAddImage={handleAddImage} handleShowColorPicker={handleShowColorPicker} handleSave={handleSave} handleClose={handleClose} handleDelete={handleDelete}></ToolBarCard> }
            
-            <div className="flex flex-col justify-center center h-full">
+            <div className="flex flex-col justify-center center h-full ">
                 <div>
                     <textarea
                         style={{color: isDark(color) ? 'white' : 'black'}}
@@ -246,7 +246,7 @@ export const Card = ({parentRect, noteData}) => {
                         ref={textareaTitleRef}
                         onChange={handleChangeTitle}
                         placeholder="Title"
-                        className="bg-transparent block w-full text-sm border border-gray-300 rounded-md row-1 text-gray-800 dark:text-gray-100  resize-none border-none border-transparent focus:border-transparent focus:ring-0 h-8" // Modifica la classe h-8 per ridurre l'altezza
+                        className="mb-2 bg-transparent block w-full text-lg border border-gray-300 rounded-md row-1 text-gray-800 dark:text-gray-100  resize-none border-none border-transparent focus:border-transparent focus:ring-0 h-8" // Modifica la classe h-8 per ridurre l'altezza
                     ></textarea>
                 </div>
                 <div>

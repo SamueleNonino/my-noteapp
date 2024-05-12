@@ -14,7 +14,7 @@ export const ToolBarCard = ({handleClose, handleSave, handleDelete, handleShowCo
 
     return ( 
         <div className="shadow-[1px_1px_10px_0px_rgba(0,0,0,0.10)] rounded-2xl px-6
-        py-4 flex gap-6 items-center justify-center relative bg-white mb-4">
+        py-4 flex gap-6 items-center justify-center relative bg-white ">
 
             <div className="relative w-6 h-6 bg-transparent bg-white"> 
             <button onClick={(e) => {
