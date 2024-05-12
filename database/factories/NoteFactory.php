@@ -19,6 +19,9 @@ class NoteFactory extends Factory
         return [
             //
             'note' => fake()->realText(2000),
+            'pos_x' => 0,
+            'pos_1' => 10,
+            
             'user_id' => 1
         ];
     }
