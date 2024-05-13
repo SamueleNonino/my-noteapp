@@ -18,11 +18,12 @@ class NoteFactory extends Factory
     {
         return [
             //
-            'note' => fake()->realText(2000),
-            'pos_x' => 0,
-            'pos_1' => 10,
-            
-            'user_id' => 1
+            'note' => fake()->sentence(3),
+            'pos_x' => fake()->numberBetween(0, 100),
+            'pos_y' => fake()->numberBetween(0, 100),
+            'image_store' => "",
+            'title' => "my title",
+            'color' => fake()->hexColor(),
         ];
     }
 }

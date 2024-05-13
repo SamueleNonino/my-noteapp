@@ -6,6 +6,10 @@ import  { ArrowCircleDown, ArrowCircleUp } from 'iconsax-react';
 import { HexColorPicker } from "react-colorful";
 import chroma from "chroma-js";
 import {CloseCircle} from 'iconsax-react'
+import NProgress from 'nprogress'
+
+router.on('start', () => NProgress.start())
+router.on('start', () => NProgress.start())
 
 
 export const Card = ({parentRect, noteData}) => {
@@ -21,7 +25,7 @@ export const Card = ({parentRect, noteData}) => {
     const [dx, setDx] = useState(0);
     const [dy, setDy] = useState(0);
     const [height, setHeight] = useState('auto');
-    const [color, setColor] = useState("#aabbcc");
+    const [color, setColor] = useState(noteData.color);
 
 
 
@@ -31,8 +35,17 @@ export const Card = ({parentRect, noteData}) => {
         note: noteData.note,
         pos_x: noteData.pos_x,
         pos_y: noteData.pos_y,
-        image_stroe: noteData.image_store
+        image_stroe: noteData.image_store,
+        color: noteData.color
     });
+
+
+    const handleChangeColor = (e) => {
+        console.log(e); 
+        setData("color", e);
+        setColor(e);
+        console.log("hooooo=>", noteData.color);
+    }
 
     const handleAddImage = (e) => {
         console.log(e.target.files[0])
@@ -84,6 +97,7 @@ export const Card = ({parentRect, noteData}) => {
 
     const handleSave = (e) => {
         e.preventDefault();
+        
         patch(route(`note.update`, noteData.id));
     }
 
@@ -275,7 +289,7 @@ export const Card = ({parentRect, noteData}) => {
         </div>
         {   
             
-            ShowColorPicker &&  <div  ref={colorareaRef}><HexColorPicker  color={color} onChange={setColor} /></div>
+            ShowColorPicker &&  <div  ref={colorareaRef}><HexColorPicker  color={noteData.color} onChange={handleChangeColor} /></div>
         }
         </div> 
        

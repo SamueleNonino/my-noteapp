@@ -7,6 +7,8 @@ import { Save2  } from 'iconsax-react';
 import { NoteRemove  } from 'iconsax-react';
 import { CloseCircle  } from 'iconsax-react';
 import { useRef } from 'react';
+import Tooltip from '@/Components/Ui/Tooltip'
+
 
 
 export const ToolBarCard = ({handleClose, handleSave, handleDelete, handleShowColorPicker, handleAddImage}) => {
@@ -17,6 +19,7 @@ export const ToolBarCard = ({handleClose, handleSave, handleDelete, handleShowCo
         py-4 flex gap-6 items-center justify-center relative bg-white ">
 
             <div className="relative w-6 h-6 bg-transparent bg-white"> 
+            <Tooltip message={"ad an image"}>
             <button onClick={(e) => {
                 e.preventDefault();
                 console.log("button onClick")
@@ -24,15 +27,30 @@ export const ToolBarCard = ({handleClose, handleSave, handleDelete, handleShowCo
             }}>
              <Image />  
             </button>
+            </Tooltip>
             <input  ref={ref} accept="image/*"
                 onChange={(e) => handleAddImage(e)}
                 type="file" style={{ display: 'none' }} />
                 
             </div>
-            <div className="relative w-6 h-6 bg-transparent bg-white"> <button onClick={handleShowColorPicker}><ColorSwatch /></button> </div>
-            <div className="relative w-6 h-6 bg-transparent bg-white "> <button style={{cursor:'pointer'}} onTouchStart={(e) => handleSave} onClick={handleSave}> <Save2 /> </button> </div>
-            <div className="relative w-6 h-6 bg-transparent bg-white"> <button onClick={handleDelete}> <NoteRemove /> </button> </div>
-            <div className="relative w-6 h-6 bg-transparent bg-white"> <button onClick={handleClose}><CloseCircle /></button> </div>
+            <div className="relative w-6 h-6 bg-transparent bg-white"> 
+                <Tooltip message={"change my color"}>
+                    <button onClick={handleShowColorPicker}>
+                        <ColorSwatch />
+                    </button>
+                </Tooltip>
+            </div>
+            <div className="relative w-6 h-6 bg-transparent bg-white "> 
+                <Tooltip message={"save me"}>
+                    <button style={{cursor:'pointer'}} onTouchStart={(e) => handleSave} onClick={handleSave}>  
+                        <Save2 /> 
+                    </button>
+                </Tooltip>
+            </div>
+            <div className="relative w-6 h-6 bg-transparent bg-white"> 
+                <Tooltip message={"delete me"}><button onClick={handleDelete}> <NoteRemove /> </button></Tooltip> </div>
+            <div className="relative w-6 h-6 bg-transparent bg-white"> 
+                <Tooltip message={"close me"}><button onClick={handleClose}><CloseCircle /></button></Tooltip> </div>
 
         </div>
     

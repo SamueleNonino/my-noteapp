@@ -22,6 +22,8 @@ return new class extends Migration
             $table->float('pos_y');
             $table->string('image_store');  
             $table->string('title');  
+            $table->string('color');  
+            
             
 
             

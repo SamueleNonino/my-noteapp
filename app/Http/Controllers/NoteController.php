@@ -52,6 +52,8 @@ class NoteController extends Controller
         $data['title'] = "";
         $data['pos_x'] = 0;
         $data['pos_y'] = 0;
+        $data['color'] = "#aabbcc";
+        
 
 
         $image=$request->file('image_store');  
@@ -137,13 +139,19 @@ class NoteController extends Controller
         if($note->user_id !== request()->user()->id)
         abot(403);
 
+      
+
         $data = $request->validate([
             'note' => ['required', 'string'],
+            'title' => ['required', 'string'],
             'pos_x' => ['required'],
-            'pos_y' => ['required'] 
+            'pos_y' => ['required'],    
+            'color' => ['required', 'string'] 
+            
         ]);
 
       
+
         $note->update($data);
 
         //  $notes = Note::query()
