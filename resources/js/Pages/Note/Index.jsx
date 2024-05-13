@@ -83,7 +83,7 @@ function Index({auth, notes}) {
     return (   
     <div>
         
-        <div className="h-screen w-screen flex flex-col justify-between bg-gray-200"  ref={ref}>
+        <div className="h-screen w-screen flex flex-col justify-between bg-gray-200 "  ref={ref}>
             
             <div className="flex w-screen h-full border-cyan-700">
             <Dropzone                       noClick={true}

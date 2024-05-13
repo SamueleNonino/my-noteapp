@@ -23,7 +23,7 @@ export const FooterMenu = ({auth}) => {
 
     const hanldeOnClickLogOut = (e) => {
         e.preventDefault();
-        get(route("profile.logout"));
+        post(route("logout"));
     };
 
     const hanldeOnClickProfileEdit = (e) => {
