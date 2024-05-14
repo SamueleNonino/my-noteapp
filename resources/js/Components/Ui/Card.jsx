@@ -235,7 +235,10 @@ export const Card = ({ parentRect, noteData }) => {
                 <div className="flex flex-col justify-center center h-full ">
                     <div>
                         <textarea
-                            style={{ color: isDark(color) ? 'white' : 'black' }}
+                            style={{ color: isDark(color) ? 'white' : 'black', 
+                                overflow:'hidden'
+                             }}
+                            
                             value={data.title}
                             ref={textareaTitleRef}
                             onChange={handleChangeTitle}

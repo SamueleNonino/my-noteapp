@@ -5,6 +5,14 @@ a small application that allows you to have notes on a virtual whiteboard
 
 ![](my-screen.png)
 
+On each note there is a toolbar that allows you to 
+-add an image
+-change color
+-save the note
+-delete the note
+
+
+
 
 ## Installation
 
@@ -32,6 +40,7 @@ Build assets:
 ```sh
 npm run dev
 ```
+Open another terminal then 
 
 Setup configuration:
 
