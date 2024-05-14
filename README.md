@@ -45,10 +45,6 @@ Generate application key:
 php artisan key:generate
 ```
 
-```sh
-touch database/database.sqlite
-```
-
 Run database migrations:
 
 ```sh
@@ -68,5 +64,5 @@ php artisan serve
 ```
 
 You're ready to go! [my-noteapp](http://127.0.0.1:8000/) in your browser, and login with:
-- **Username:** johndoe@example.com
-- **Password:** secret
+- **Username:** mail@example.com
+- **Password:** password
