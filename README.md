@@ -5,11 +5,11 @@ a small application that allows you to have notes on a virtual whiteboard
 
 ![](my-screen.png)
 
-On each note there is a toolbar that allows you to 
--add an image
--change color
--save the note
--delete the note
+On each note there is a toolbar that allows you to\n
+-add an image\n
+-change color\n
+-save the note\n
+-delete the note\n
 
 
 
